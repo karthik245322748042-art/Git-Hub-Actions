@@ -1,8 +1,19 @@
-name: hello-world
-on: push
+name: My First Workflow
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
 jobs:
-  my-job:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: my-step
-        run: echo "Hello World!"
+      - name: Checkout my code
+        uses: actions/checkout@v4
+
+      - name: Install packages
+        run: npm install
+
+      - name: Run tests
+        run: npm test
