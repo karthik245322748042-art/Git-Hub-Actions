@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout my code
         uses: actions/checkout@v4
+        
+      - name: installing package.json
+        run:  npm init -y
 
       - name: Install packages
         run: npm install
