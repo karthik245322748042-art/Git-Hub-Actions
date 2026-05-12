@@ -4,6 +4,8 @@ on:
     branches:
       - main
       - develop
+  pull_request:
+      - main
 jobs:
   build1:
         runs-on: ubuntu-latest
