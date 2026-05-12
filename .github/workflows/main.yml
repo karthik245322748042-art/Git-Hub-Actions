@@ -3,10 +3,6 @@ on:
   push:
     branches:
       - main
-      - develop
-  pull_request:
-    branches:
-      - main
 jobs:
   build1:
         runs-on: ubuntu-latest
@@ -18,6 +14,11 @@ jobs:
          steps:
            - name: This is the 2nd line 
              run: echo "2nd line is running perfect"
+  deploy:
+         runs-on: ubuntu-latest
+         steps:
+           - name: Using variables in the GHA
+             run: echo " Hello this is, ${{vars.My_Name}}
         
     
   
