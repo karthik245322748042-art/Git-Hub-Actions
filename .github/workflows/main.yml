@@ -19,6 +19,11 @@ jobs:
          steps:
            - name: Using variables in the GHA
              run: echo " Hello this is, ${{vars.My_Name}}"
+  deploy1:
+          runs-on: ubuntu-latest
+          steps:
+            - name: printing the index.html file
+              run:  cat index.html
         
     
   
