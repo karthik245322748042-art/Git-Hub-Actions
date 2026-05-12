@@ -1,21 +1,9 @@
-name: My First Workflow
-on:
-  push:
-    branches: [main]
-  pull_request:
-
+name: my first code
+on: workflow_dispatch
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout my code
-        uses: actions/checkout@v4
-
-      - name: installing package.json
-        run: npm init -y
-
-      - name: Install packages
-        run: npm install
-
-      - name: Run tests
-        run: echo "All tests passed!"
+  first_one:
+        runs-on: ubuntu-latest
+        steps:
+          - name: hello there this is the first code
+            run: echo "Welcome to GHA"
+  
