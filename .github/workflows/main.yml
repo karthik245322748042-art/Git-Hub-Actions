@@ -1,12 +1,16 @@
 name: my first code
 on: workflow_dispatch
 jobs:
-  first_one:
+  build1:
         runs-on: ubuntu-latest
         steps:
-          - name: hello there this is the first code
-            run: |
-              echo "This is the 1st line"
-              echo " This is the 2nd line"
-              
+          - name: This is the 1st line 
+            run: echo "1st line is running perfect"
+  build2:
+         runs-on: ubuntu-latest
+         steps:
+           - name: This is the 2nd line 
+             run: echo "2nd line is running perfect"
+        
+    
   
