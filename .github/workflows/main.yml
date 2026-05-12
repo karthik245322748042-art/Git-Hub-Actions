@@ -18,7 +18,7 @@ jobs:
          runs-on: ubuntu-latest
          steps:
            - name: Using variables in the GHA
-             run: echo " Hello this is, ${{vars.My_Name}}
+             run: echo " Hello this is, ${{vars.My_Name}}"
         
     
   
