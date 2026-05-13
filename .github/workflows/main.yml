@@ -4,7 +4,7 @@ on:
     branches:
       - main
 env:
-  APP_ENV : "demo"
+  APP_ENV: "DEMO1"
 jobs:
   env_demo:
         env:
@@ -14,8 +14,6 @@ jobs:
           - name: calling .env
             run: echo "please run on the $APP_ENV"
             
-          # - name: This is the 1st line 
-          #   run: echo "1st line is running perfect"
   build2:
          runs-on: ubuntu-latest
          steps:
@@ -39,6 +37,8 @@ jobs:
           runs-on: ubuntu-latest
           steps:
             - name: using .env file
+              env:
+                APP_ENV: "CAT"
               run: echo "App is using $APP_ENV"
     
   
