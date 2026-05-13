@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: calling .env
+        env:
+          APP_ENV : "DEMO-3"
         run: echo "Please run the $APP_ENV"
         
   build2:
