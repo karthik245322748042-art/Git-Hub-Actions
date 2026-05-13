@@ -6,11 +6,16 @@ on:
 env:
   APP_ENV : "demo"
 jobs:
-  build1:
+  env_demo:
+        env:
+          APP_ENV : "test"
         runs-on: ubuntu-latest
         steps:
-          - name: This is the 1st line 
-            run: echo "1st line is running perfect"
+          - name: calling .env
+            run: echo "please run on the $APP_ENV"
+            
+          # - name: This is the 1st line 
+          #   run: echo "1st line is running perfect"
   build2:
          runs-on: ubuntu-latest
          steps:
