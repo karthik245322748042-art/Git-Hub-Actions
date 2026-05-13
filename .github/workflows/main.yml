@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+env:
+  APP_ENV : "demo"
 jobs:
   build1:
         runs-on: ubuntu-latest
@@ -27,6 +29,11 @@ jobs:
 
             - name: printing the index.html file
               run:  cat index.html
-        
+
+  print_env:
+          runs-on: ubuntu-latest
+          steps:
+            - name: using .env file
+              run: echo "App is using $APP_ENV"
     
   
