@@ -7,22 +7,25 @@ env:
   APP_ENV: "DEMO1"
 jobs:
   print-env:
-        env:
-        APP_ENV: "DEMO-2"
-            runs-on: ubuntu-latest
-            steps:
-              - name: calling .env
-                run: echo "Please run the $APP_ENV"
+    env:
+      APP_ENV: "DEMO-2"
+    runs-on: ubuntu-latest
+    steps:
+      - name: calling .env
+        run: echo "Please run the $APP_ENV"
+        
   build2:
          runs-on: ubuntu-latest
          steps:
            - name: This is the 2nd line 
              run: echo "2nd line is running perfect"
+             
   deploy:
          runs-on: ubuntu-latest
          steps:
            - name: Using variables in the GHA
              run: echo " Hello this is, ${{vars.My_Name}}"
+             
   deploy1:
           runs-on: ubuntu-latest
           steps:
