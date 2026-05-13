@@ -6,14 +6,11 @@ on:
 env:
   APP_ENV: "DEMO1"
 jobs:
-  env_demo:
-        env:
-          APP_ENV : "test"
-        runs-on: ubuntu-latest
-        steps:
-          - name: calling .env
-            run: echo "please run on the $APP_ENV"
-            
+  print-env:
+            runs-on: ubuntu-latest
+            steps:
+              - name: calling .env
+                run: echo "Please run the $APP_ENV"
   build2:
          runs-on: ubuntu-latest
          steps:
@@ -32,13 +29,4 @@ jobs:
 
             - name: printing the index.html file
               run:  cat index.html
-
-  print_env:
-          runs-on: ubuntu-latest
-          steps:
-            - name: using .env file
-              env:
-                APP_ENV: "CAT"
-              run: echo "App is using $APP_ENV"
-    
   
